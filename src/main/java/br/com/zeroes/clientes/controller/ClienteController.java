@@ -21,7 +21,6 @@ public class ClienteController {
     
     @GetMapping
     public ModelAndView listar() {
-
         ModelAndView modelAndView = new ModelAndView("cliente/listar.html");
 
         List<Cliente> clientes = clienteRepository.findAll();
@@ -34,8 +33,8 @@ public class ClienteController {
     public ModelAndView detalhar(@PathVariable Long id) {
         ModelAndView modelAndView = new ModelAndView("cliente/detalhar.html");
 
-        Cliente cliente = clienteRepository.getOne(id)
-        modelAndView.addObject("cliente", cliente)
+        Cliente cliente = clienteRepository.getOne(id);
+        modelAndView.addObject("cliente", cliente);
 
         return modelAndView;
     }
