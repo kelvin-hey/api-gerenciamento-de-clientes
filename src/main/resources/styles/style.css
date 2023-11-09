@@ -1,0 +1,23 @@
+body {
+    padding-top: 70px; /* Adiciona espaço para a barra de navegação fixa no topo */
+}
+
+.navbar {
+    background-color: #3498db; /* Cor de fundo da barra de navegação */
+}
+
+.navbar-brand {
+    color: #fff !important; /* Cor do texto da marca da barra de navegação */
+}
+
+.navbar-toggler-icon {
+    background-color: #fff; /* Cor do ícone do botão de alternância do menu */
+}
+
+.navbar-nav a {
+    color: #fff !important; /* Cor dos itens do menu da barra de navegação */
+}
+
+.navbar-nav a:hover {
+    color: #ecf0f1 !important; /* Cor ao passar o mouse sobre os itens do menu */
+}
