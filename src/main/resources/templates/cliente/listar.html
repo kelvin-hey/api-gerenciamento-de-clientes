@@ -9,12 +9,33 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <style>
+        body {
+            padding-top: 56px;
+        }
+
+        main {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    <nav class="navbar navbar-light bg-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">API - Gerenciamento de Clientes</a>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link text-white" href="#">Gerenciar clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Cadastrar Novo cliente</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -29,48 +50,37 @@
             <div class="col-sm-12">
                 <table class="table">
                     <thead>
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Nome</th>
-                        <th scope="col">Data de Nascimento</th>
-                        <th scope="col">Profissão</th>
-                        <th scope="col">Ações</th>
-                      </tr>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Data de Nascimento</th>
+                            <th scope="col">Profissão</th>
+                            <th scope="col">Ações</th>
+                        </tr>
                     </thead>
-                    
-                    <tbody>
-                      <tr th:each="cliente : ${clientes}">
-                        <th scope="row" th:text="${cliente.id}"></th>
-                        <td>
-                            <a 
-                                th:text="${cliente.nome}" 
-                                th:href="@{/cliente/{id} (id=${cliente.id})}"
-                            />
-                        </td>
-                        <td th:text="${cliente.dataNascimento}"></td>
-                        <td th:text="${cliente.profissao}"></td>
 
-                        <td>
-                            <a 
-                                th:href="@{cliente/{id}/editar (id=${cliente.id})}" 
-                                class="btn btn-warning"
-                            >
-                                Editar
-                            </a>
-                            <a 
-                                th:href="@{/cliente/{id}/excluir (id=${cliente.id})}"
-                                
-                                class="btn btn-danger"
-                                
-                                onclick="return confirm('Tem certeza que deseja excluir o cliente?');"
-                            >
-                            Excluir  
-                            </a>
-                        </td>
-                      </tr>
-                      
+                    <tbody>
+                        <tr th:each="cliente : ${clientes}">
+                            <th scope="row" th:text="${cliente.id}"></th>
+                            <td>
+                                <a th:text="${cliente.nome}" th:href="@{/cliente/{id} (id=${cliente.id})}" />
+                            </td>
+                            <td th:text="${cliente.dataNascimento}"></td>
+                            <td th:text="${cliente.profissao}"></td>
+
+                            <td>
+                                <a th:href="@{cliente/{id}/editar (id=${cliente.id})}" class="btn btn-warning">
+                                    Editar
+                                </a>
+                                <a th:href="@{/cliente/{id}/excluir (id=${cliente.id})}" class="btn btn-danger"
+                                    onclick="return confirm('Tem certeza que deseja excluir o cliente?');">
+                                    Excluir
+                                </a>
+                            </td>
+                        </tr>
+
                     </tbody>
-                  </table>
+                </table>
             </div>
         </div>
 
@@ -80,7 +90,7 @@
             </div>
         </div>
     </main>
-    
+
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
