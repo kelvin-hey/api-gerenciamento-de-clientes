@@ -1,17 +1,18 @@
 ![capa](https://github.com/kelvin-hey/api-gerenciamento-de-clientes/blob/main/assets/logo.png)
 ![linha](https://github.com/kelvin-hey/kelvin-hey/blob/main/assets/line.png)
 
-### 📌 Descrição do Projeto
+### Descrição do Projeto
 
 API desenvolvida utilizando Java juntamente com o Framework Spring 
 
-### 🔨 Funcionalidades do projeto
+### Funcionalidades do projeto
 
-Gerenciar clientes
+- `Listar clientes`
+- `Adicionar cliente`
+- `Remover cliente`
+- `Editar cliente`
 
-### ✔️ Tecnologias utilizadas
-
-Para o desenvolvimento da API foram utilizadas as seguintes tecnologias e ferramentas:
+### Tecnologias utilizadas
 
 - `Java`: linguagem de programação para desenvolver o back-end
 - `MySQL`: sistema de gerenciamento de banco de dados relacional
@@ -21,6 +22,10 @@ Para o desenvolvimento da API foram utilizadas as seguintes tecnologias e ferram
 - `CSS`: linguagem de estilo que aprimora a apresentação visual das páginas HTML
 - `Bootstrap`: framework de design responsivo que simplifica o desenvolvimento de interfaces web
 
-### 🛠️ Instalação 
+### Instalação 
 
-### 📺 Preview da Aplicação
+### Uso
+
+### Configuração
+
+### Preview da Aplicação
