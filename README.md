@@ -21,6 +21,6 @@ Para o desenvolvimento da API foram utilizadas as seguintes tecnologias e ferram
 - `CSS`: linguagem de estilo que aprimora a apresentação visual das páginas HTML
 - `Bootstrap`: framework de design responsivo que simplifica o desenvolvimento de interfaces web
 
-### 📺 Telas
-
 ### 🛠️ Instalação 
+
+### 📺 Preview da Aplicação
